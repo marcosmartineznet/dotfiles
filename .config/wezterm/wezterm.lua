@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 config = wezterm.config_builder()
 
-config.font = wezterm.font("JetBrains Mono NerdFont")
+-- config.font = wezterm.font("JetBrains Mono NerdFont")
 
 config.leader = { key = ",", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
@@ -89,8 +89,8 @@ end
 
 -- tab bar
 config.hide_tab_bar_if_only_one_tab = false
-config.tab_bar_at_bottom = true
-config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = false 
+config.use_fancy_tab_bar = true
 
 wezterm.on("update-right-status", function(window, _)
 	local prefix = ""
